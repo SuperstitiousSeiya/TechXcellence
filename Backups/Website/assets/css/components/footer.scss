@@ -1,0 +1,50 @@
+@import "base";
+
+#footer {
+    margin-top: 4rem;
+    background-color: $primary-clr;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    height: 300px;
+    padding-inline: $margin-padding;
+    gap: 2rem;
+    .left {
+      align-items: baseline !important;
+      @include flex_center();
+      height: 100%;
+      border-right: 2px solid $text-clr;
+    }
+  
+    .right {
+      // padding-top: 5rem;
+      display: flex;
+      height: 100%;
+      gap: 1rem;
+      align-items: center;
+      .links {
+        a {
+          color: $bg-clr;
+          font-weight: bold;
+          text-decoration: underline;
+          white-space: nowrap;
+        }
+      }
+  
+      .col-1 {
+        justify-content: flex-start !important;
+        @include flex_center();
+        gap: 2rem;
+        .stars {
+          i {
+            color: $bg-clr;
+            font-size: 2rem;
+          }
+        }
+        .quote {
+          color: $bg-clr;
+          font-weight: bold;
+        }
+      }
+    }
+  }

@@ -1,0 +1,86 @@
+@import "components/base";
+@import "components/footer";
+@import "components/nav";
+@import "components/dualcontainer.scss";
+
+section {
+  padding-inline: $margin-padding;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.hero {
+  @include flex_center();
+  height: 90%;
+  gap: 4rem;
+  background-image: url("../images/Websites/CareerPaths/hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+    background-color: rgba(21, 21, 21, 0.446);
+    background-blend-mode: darken;
+  // justify-content: center;
+  h1 {
+    font-size: $font-header - 20px;
+    @include vibrant__gradient();
+  }
+
+  .description {
+    text-align: center;
+    font-size: 1.3rem;
+    color: $text-clr;
+    text-shadow: -1px 1px 0 #000,
+				  1px 1px 0 #000,
+				 1px -1px 0 #000,
+				-1px -1px 0 #000;
+
+
+  }
+}
+
+.career_paths{
+    h1{
+        @include vibrant__gradient();
+        margin-bottom: 2rem
+    }
+    .career_container{
+        @include flex_center();
+        gap: 3rem;
+        .career{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            .img-container{
+                min-width: 250px;
+                max-width: 300px;
+                flex: 1 1 20%;
+                img{
+                    width: 100%;
+                }
+            }
+
+            .description{
+                flex: 1 1 50%;
+                p{
+                    margin-bottom: 1rem;
+                    span{
+                        @include vibrant__gradient();
+                        font-weight: bold;
+                    }
+                }
+
+                .career-btn{
+                    display: block;
+                    margin: auto;
+                    @include button_main();
+                    @include gradient_background();
+                    a{
+                        @include bold_text_main();
+                    }
+                }
+            }
+        }
+    }
+}

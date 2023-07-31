@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// Bold vibrant color theme
+
+// default color
+:root {
+  --primary-clr: #e89b07;
+  --accent-clr: #aeff86;
+  --secondary-clr: #626060;
+  --text-clr: white;
+  --bg-clr: #0f110e;
+  --semi-bg: rgba(217, 217, 217, 0.05);
+}
+
+$primary-clr: var(--primary-clr);
+$accent-clr: var(--accent-clr);
+$secondary-clr: var(--secondary-clr);
+$text-clr: var(--text-clr);
+$bg-clr: var(--bg-clr);
+$semi-bg : var(--semi-bg);
+//mystic orchids color theme
+body.mystic {
+  --primary-clr: #6e30d1;
+  --accent-clr: #bf4976;
+  --secondary-clr: #f3d792;
+  --text-clr: #150e1b;
+  --bg-clr: #f3eef6;
+}
+
+//green theme
+body.green {
+  --primary-clr: #40582c;
+  --accent-clr: #658b46;
+  --secondary-clr: #bfdfd0;
+  --text-clr: #150e1b;
+  --bg-clr: #f3eef6;
+}
+
+$gradient: -webkit-linear-gradient(right, $accent-clr, $primary-clr);
+
+::selection {
+  background: $accent-clr;
+}
+
+// mixin
+
+// for text gradient color
+@mixin vibrant__gradient() {
+  background: -webkit-linear-gradient(right, $accent-clr, $primary-clr);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin vibrant__gradient2($pos) {
+  background: -webkit-linear-gradient($pos, $text-clr, $accent-clr);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// flex center by column
+@mixin flex_center() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+// auto apply gradient background
+@mixin gradient_background() {
+  background: -webkit-linear-gradient(right, $accent-clr, $primary-clr);
+}
+
+// @mixin gradient_background($pos) {
+//   @if($pos == null){
+//     background: -webkit-linear-gradient(right, $accent-clr, $primary-clr);
+//   } @else{
+//     background: -webkit-linear-gradient($pos, $accent-clr, $primary-clr);
+//   }
+
+// }
+
+@mixin bold_text_main() {
+  font-weight: bold;
+  color: $bg-clr;
+}
+@mixin bold_text_secondary() {
+  font-weight: bold;
+  color: $text-clr;
+}
+
+// for buttons 
+@mixin button_main(){
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+@mixin button_outlined($color){
+  padding: 1rem 2rem;
+  border: 2px solid $color;
+  border-radius: 30px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+//Entirety
+$margin-padding: 3rem;
+$font-header: 70px;
+$font-subheader: 35px;
+
+
+//main
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin-top: 80px;
+  height: calc(100svh - 80px);
+  background-color: $bg-clr;
+  color: $text-clr;
+  margin-bottom: 35rem;
+  transition: background-color 0.25s;
+}

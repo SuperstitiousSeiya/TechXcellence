@@ -1,0 +1,133 @@
+// import  component styles
+@import "components/base";
+@import "components/footer";
+@import "components/nav";
+@import "components/dualcontainer.scss";
+
+section {
+  padding-inline: $margin-padding;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+// hero
+.hero {
+  display: flex;
+  align-items: center;
+  height: 80%;
+  // justify-content: center;
+  h1 {
+    font-size: $font-header - 20px;
+    @include vibrant__gradient();
+  }
+
+  .description{
+    
+  }
+}
+
+// what section
+.what {
+    .header{
+        @include vibrant__gradient();
+        margin-bottom: 2rem;
+    }
+
+    .contents{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        & > *{
+            flex: 1 1 50%;
+        }
+
+        .img__container{
+            max-width: 500px;
+            padding: 1rem;
+            min-width: 400px;
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }    
+
+        .description{
+
+            fot-size: 1rem;
+            button{
+                @include button_outlined($accent-clr);
+                display: block;
+                margin: auto;
+                a{
+                    color: $accent-clr;
+                }
+            }
+        }
+    }
+}
+
+// career paths
+.career_paths {
+  padding: 2rem 2rem;
+  background-color: $semi-bg;
+  @include flex_center();
+  gap: 3rem;
+
+  &__header {
+    @include vibrant__gradient();
+  }
+  .__container {
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      flex: 20%;
+      button {
+        @include gradient_background();
+        @include button_main();
+        @include bold_text_main();
+      }
+      &::before {
+        background-image: url("../images/Websites/careerPaths.png ");
+        background-position: 2rem -7rem;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  button {
+    // @include gradient_background();
+    @include button_outlined($accent-clr);
+    a {
+      @include bold_text_secondary();
+      @include vibrant__gradient();
+    }
+  }
+}
+
+.school-offering {
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  padding: 4rem $margin-padding;
+  grid-template-columns: 1fr 20%;
+  div {
+    h1 {
+      @include vibrant__gradient();
+    }
+    .description {
+      @include bold_text_secondary();
+    }
+  }
+
+  button {
+    @include button_main();
+    @include gradient_background();
+    padding: 0.8rem 2rem !important;
+    a {
+      @include bold_text_main();
+    }
+  }
+}

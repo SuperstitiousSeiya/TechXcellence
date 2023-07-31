@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="faqs.css">
+    <script src="https://kit.fontawesome.com/f0c7d57008.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            LOGO
+        </div>
+        <i id="show-menu" class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        <i id="hide-menu" class="fa-solid fa-xmark" onclick="toggleMenu()"></i>
+        <a id="home" href="#">HOME</a>
+
+        <div class="dropdown">
+            
+            <button class="dropbtn">COURSES AND TRACKS</button>
+            <div class="dropdown-content">
+              <a href="#">Item 1</a>
+              <a href="#">Item 2</a>
+              <a href="#">Item 3</a>
+            </div>
+        </div>
+        <a id="contacts" href="#">CONTACTS </a>
+        <a id="Exp" href="#">LEARNING EXPERIENCE</a>
+        <select name="Theme" class="theme" id="theme">
+            <option value="none">Dark Mode</option>
+            <option value=""></option>
+            <option value=""></option>
+        </select>
+    </nav>
+    
+<section class="content">
+    <div class="Title">Frequently Asked Questions</div>
+    <div class="qstns">
+        <div class="sort">
+            <button class="options">Option 1</button>
+            <button class="options">Option 1</button>
+            <button class="options">Option 1</button>
+            <button class="options">Option 1</button>
+            <button class="options">Option 1</button>
+        </div>
+        <div>
+            <div class="Back">
+                <div class="title"><h2>Popular Questions</h2></div>
+            </div>
+        </div>
+        <div class="popular-question">
+            <div class="question-wrapper">
+                <div class="flip-container">
+                    <div class="flipper" onclick="toggleAnswer(this)">
+                        <div class="front">
+                            What are the subjects or specialized courses included in the Industrial Arts strand?
+                        </div>
+                        <div class="back">
+                            <div>Answer:</div>
+                            <br>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                                massa. Cum sociis natoque penatibus et
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="flip-container">
+                    <div class="flipper" onclick="toggleAnswer(this)">
+                        <div class="front">
+                            What are the subjects or specialized courses included in the Industrial Arts strand?
+                        </div>
+                        <div class="back">
+                            <div>Answer:</div>
+                            <br>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                                massa. Cum sociis natoque penatibus et
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-container">
+                    <div class="flipper" onclick="toggleAnswer(this)">
+                        <div class="front">
+                            What are the subjects or specialized courses included in the Industrial Arts strand?
+                        </div>
+                        <div class="back">
+                            <div>Answer:</div>
+                            <br>
+
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                                massa. Cum sociis natoque penatibus et
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="clarifications">
+            <div class="questions-answer">
+                <div class="questions">
+                    <div class="question">
+                        What is the Industrial Arts strand in the Senior High School (SHS) TechVoc track?
+                    </div>
+                    <div class="add-remove-btn">
+                        <i class="fa-solid fa-plus" onclick="ToggleAnswer(this)"></i>
+                        <i class="fa-solid fa-minus" onclick="ToggleAnswer(this)"></i>
+                    </div>
+                </div>
+                <div class="Response">
+                    <div class="txt">
+                        The Industrial Arts strand under the Technical-Vocational-Livelihood track provides students with the necessary knowledge and skills they need for employment. These include technical and manual skills in Carpentry and Construction, Electrical and Electronics, Automotive and Driving, Repair and Installation, Welding, and Plumbing.
+                    </div>
+                </div>
+            </div>
+            <div class="questions-answer">
+                <div class="questions">
+                    <div class="question">
+                        What is the Industrial Arts strand in the Senior High School (SHS) TechVoc track?
+                    </div>
+                    <div class="add-remove-btn">
+                        <i class="fa-solid fa-plus" onclick="ToggleAnswer(this)"></i>
+                        <i class="fa-solid fa-minus" onclick="ToggleAnswer(this)"></i>
+                    </div>
+                </div>
+                <div class="Response">
+                    <div class="txt">
+                        The Industrial Arts strand under the Technical-Vocational-Livelihood track provides students with the necessary knowledge and skills they need for employment. These include technical and manual skills in Carpentry and Construction, Electrical and Electronics, Automotive and Driving, Repair and Installation, Welding, and Plumbing.
+                    </div>
+                </div>
+            </div>
+            <div class="questions-answer">
+                <div class="questions">
+                    <div class="question">
+                        What is the Industrial Arts strand in the Senior High School (SHS) TechVoc track?
+                    </div>
+                    <div class="add-remove-btn">
+                        <i class="fa-solid fa-plus" onclick="ToggleAnswer(this)"></i>
+                        <i class="fa-solid fa-minus" onclick="ToggleAnswer(this)"></i>
+                    </div>
+                </div>
+                <div class="Response">
+                    <div class="txt">
+                        The Industrial Arts strand under the Technical-Vocational-Livelihood track provides students with the necessary knowledge and skills they need for employment. These include technical and manual skills in Carpentry and Construction, Electrical and Electronics, Automotive and Driving, Repair and Installation, Welding, and Plumbing.
+                    </div>
+                </div>
+            </div>
+            <div class="questions-answer">
+                <div class="questions">
+                    <div class="question">
+                        What is the Industrial Arts strand in the Senior High School (SHS) TechVoc track?
+                    </div>
+                    <div class="add-remove-btn">
+                        <i class="fa-solid fa-plus" onclick="ToggleAnswer(this)"></i>
+                        <i class="fa-solid fa-minus" onclick="ToggleAnswer(this)"></i>
+                    </div>
+                </div>
+                <div class="Response">
+                    <div class="txt">
+                        The Industrial Arts strand under the Technical-Vocational-Livelihood track provides students with the necessary knowledge and skills they need for employment. These include technical and manual skills in Carpentry and Construction, Electrical and Electronics, Automotive and Driving, Repair and Installation, Welding, and Plumbing.
+                    </div>
+                </div>
+            </div>
+            <div class="questions-answer">
+                <div class="questions">
+                    <div class="question">
+                        What is the Industrial Arts strand in the Senior High School (SHS) TechVoc track?
+                    </div>
+                    <div class="add-remove-btn">
+                        <i class="fa-solid fa-plus" onclick="ToggleAnswer(this)"></i>
+                        <i class="fa-solid fa-minus" onclick="ToggleAnswer(this)"></i>
+                    </div>
+                </div>
+                <div class="Response">
+                    <div class="txt">
+                        The Industrial Arts strand under the Technical-Vocational-Livelihood track provides students with the necessary knowledge and skills they need for employment. These include technical and manual skills in Carpentry and Construction, Electrical and Electronics, Automotive and Driving, Repair and Installation, Welding, and Plumbing.
+                    </div>
+                </div>
+            </div>
+            <div class="questions-answer">
+                <div class="questions">
+                    <div class="question">
+                        What is the Industrial Arts strand in the Senior High School (SHS) TechVoc track?
+                    </div>
+                    <div class="add-remove-btn">
+                        <i class="fa-solid fa-plus" onclick="ToggleAnswer(this)"></i>
+                        <i class="fa-solid fa-minus" onclick="ToggleAnswer(this)"></i>
+                    </div>
+                </div>
+                <div class="Response">
+                    <div class="txt">
+                        The Industrial Arts strand under the Technical-Vocational-Livelihood track provides students with the necessary knowledge and skills they need for employment. These include technical and manual skills in Carpentry and Construction, Electrical and Electronics, Automotive and Driving, Repair and Installation, Welding, and Plumbing.
+                    </div>
+                </div>
+            </div>
+            <div class="questions-answer">
+                <div class="questions">
+                    <div class="question">
+                        What is the Industrial Arts strand in the Senior High School (SHS) TechVoc track?
+                    </div>
+                    <div class="add-remove-btn">
+                        <i class="fa-solid fa-plus" onclick="ToggleAnswer(this)"></i>
+                        <i class="fa-solid fa-minus" onclick="ToggleAnswer(this)"></i>
+                    </div>
+                </div>
+                <div class="Response">
+                    <div class="txt">
+                        The Industrial Arts strand under the Technical-Vocational-Livelihood track provides students with the necessary knowledge and skills they need for employment. These include technical and manual skills in Carpentry and Construction, Electrical and Electronics, Automotive and Driving, Repair and Installation, Welding, and Plumbing.
+                    </div>
+                </div>
+            </div>
+            <div class="questions-answer">
+                <div class="questions">
+                    <div class="question">
+                        What is the Industrial Arts strand in the Senior High School (SHS) TechVoc track?
+                    </div>
+                    <div class="add-remove-btn">
+                        <i class="fa-solid fa-plus" onclick="ToggleAnswer(this)"></i>
+                        <i class="fa-solid fa-minus" onclick="ToggleAnswer(this)"></i>
+                    </div>
+                </div>
+                <div class="Response">
+                    <div class="txt">
+                        The Industrial Arts strand under the Technical-Vocational-Livelihood track provides students with the necessary knowledge and skills they need for employment. These include technical and manual skills in Carpentry and Construction, Electrical and Electronics, Automotive and Driving, Repair and Installation, Welding, and Plumbing.
+                    </div>
+                </div>
+            </div>
+            <div class="questions-answer">
+                <div class="questions">
+                    <div class="question">
+                        What is the Industrial Arts strand in the Senior High School (SHS) TechVoc track?
+                    </div>
+                    <div class="add-remove-btn">
+                        <i class="fa-solid fa-plus" onclick="ToggleAnswer(this)"></i>
+                        <i class="fa-solid fa-minus" onclick="ToggleAnswer(this)"></i>
+                    </div>
+                </div>
+                <div class="Response">
+                    <div class="txt">
+                        The Industrial Arts strand under the Technical-Vocational-Livelihood track provides students with the necessary knowledge and skills they need for employment. These include technical and manual skills in Carpentry and Construction, Electrical and Electronics, Automotive and Driving, Repair and Installation, Welding, and Plumbing.
+                    </div>
+                </div>
+            </div>
+            <div class="questions-answer">
+                <div class="questions">
+                    <div class="question">
+                        What is the Industrial Arts strand in the Senior High School (SHS) TechVoc track?
+                    </div>
+                    <div class="add-remove-btn">
+                        <i class="fa-solid fa-plus" onclick="ToggleAnswer(this)"></i>
+                        <i class="fa-solid fa-minus" onclick="ToggleAnswer(this)"></i>
+                    </div>
+                </div>
+                <div class="Response">
+                    <div class="txt">
+                        The Industrial Arts strand under the Technical-Vocational-Livelihood track provides students with the necessary knowledge and skills they need for employment. These include technical and manual skills in Carpentry and Construction, Electrical and Electronics, Automotive and Driving, Repair and Installation, Welding, and Plumbing.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    footer
+</footer>
+</body>
+<script src="faqs.js"></script>
+</html>

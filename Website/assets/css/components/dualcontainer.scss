@@ -1,0 +1,46 @@
+@import "base";
+
+.__container {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    & > .container {
+      padding: 3rem 2rem;
+      position: relative;
+      flex-basis: 300px;
+
+      &::before {
+        position: absolute !important;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: -20px;
+        bottom: -30px;
+        z-index: -1;
+      }
+    }
+
+    & > .container:nth-of-type(odd) {
+      border: 3px solid $primary-clr;
+      span {
+        color: $primary-clr;
+      }
+
+      &::before {
+        border: 1px dashed $primary-clr;
+      }
+    }
+
+    & > .container:nth-of-type(even) {
+      border: 3px solid $accent-clr;
+      span {
+        color: $accent-clr;
+      }
+
+      &::before {
+        border: 1px dashed $accent-clr;
+      }
+    }
+  }

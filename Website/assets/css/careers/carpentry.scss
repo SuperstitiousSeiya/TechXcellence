@@ -1,0 +1,264 @@
+@import "../components/base";
+@import "../components/footer";
+@import "../components/nav";
+@import "../components/dualcontainer.scss";
+
+section {
+  padding-inline: $margin-padding;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
+// hero
+.hero {
+  height: 90%;
+  @include flex_center();
+  gap: 3rem;
+  h1.title {
+    font-size: $font-header;
+    @include vibrant__gradient();
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    .description {
+      flex: 1 1 70%;
+      padding: 3rem 2rem;
+      position: relative;
+      flex-basis: 300px;
+      border: 3px solid $primary-clr;
+      span {
+        color: $accent-clr;
+      }
+      &::before {
+        position: absolute !important;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: -30px;
+        bottom: -30px;
+        z-index: -1;
+        border: 1px dashed $primary-clr;
+      }
+    }
+
+    .img-container {
+      flex: 1 1 30%;
+    }
+  }
+}
+
+// .roadmap
+
+.roadmap {
+  h1.header{
+    @include vibrant__gradient();
+    text-align: center;
+  }
+  .subheader{
+    @include vibrant__gradient2(left);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    width: 50%;
+    margin-inline: auto;
+    font-weight: bold;
+  }
+
+  .road{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    // margin-bottom: 5rem;
+    // column-gap: 5rem;
+
+    // line 
+    .line-v{
+      height: 100%;
+      width: 7px;
+      position: absolute;
+      background: -webkit-linear-gradient(top, $accent-clr, $primary-clr);
+    }
+
+    .path{
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      width: 100%;
+
+      // path description 
+      &_description{
+        padding: 1rem 2rem;
+        border: 2px solid $accent-clr;
+        border-radius: 30px;
+        box-shadow: 6px 8px 4px 2px $primary-clr;
+        flex: 1 1 80%;
+        h3.highlighted{
+          color: $primary-clr;
+          text-align: center;
+        }
+
+        p{
+          font-size: 0.9rem;
+          text-align: center;
+        }
+      }
+
+
+      .line-h{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 6px;
+        background-color: $accent-clr;
+        flex: 0 1 30%;
+
+        .icon{
+          border-radius: 50%;
+          background-color: inherit;
+          @include flex_center();
+          width: 28px;
+          aspect-ratio: 1/1;
+          i{
+            color: $bg-clr;
+          }
+        }
+
+        .number{
+          background-color: inherit;
+          z-index: 3;
+          margin-left: -15px;
+          width: 28px;
+          aspect-ratio: 1/1;
+          @include flex_center();
+          border-radius: 50%;
+          color: $bg-clr;
+          font-size: 0.5;
+          font-weight: bold;
+        }
+
+      }
+
+
+      // for alternating distribution of columns 
+
+      &:nth-of-type(n+6){
+        .line-h{
+          background-color: $primary-clr;
+        }
+      }
+      &:nth-of-type(odd){
+        grid-column: 1;
+
+        .path_description{
+          box-shadow: -6px 8px 4px 2px $primary-clr !important;
+        }
+        .line-h{
+          .number{
+            margin-right: -13px;
+          }
+        }
+      }
+      &:nth-of-type(even){
+        grid-column: 2;
+        flex-direction: row-reverse;
+
+        .line-h{
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+    // loops for proper distribution of rows 
+    @for $i from 1 through 100{
+      .path:nth-of-type(#{$i}){
+        grid-row: $i;
+      }
+    }
+
+  }
+
+
+}
+
+// other careers 
+
+.other-careers{
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: $semi-bg;
+  padding: 3rem $margin-padding;
+  .arrow{
+    cursor: pointer;
+    i{
+      font-size: 1.5rem;
+    }
+  }
+
+  #right-arrow{
+    margin-left: auto;
+  }
+
+  .careers_container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    // place-items: center;
+    justify-content: center;
+    align-items: center;
+    
+    // grid-template-columns: repeat(3,1fr);
+
+    .career{
+      @include flex_center();
+      p.career-name{
+        color: $primary-clr;
+      }
+      .img-container{
+        position: relative;
+        width: 300px;
+        @include flex_center();
+        img{
+          width: 100%;
+          aspect-ratio: 16/9;
+          margin-bottom: 1rem;
+          object-fit: cover;
+          transition: filter 0.25s;
+          z-index: -1;
+        }
+
+        button{
+          position: absolute;
+          @include button_main();
+          @include gradient_background();
+          opacity: 0;
+          transition: opacity 0.25s;
+      
+          a{
+            @include bold_text_main();
+
+          }
+        }
+
+        &:hover{
+          button{
+            opacity: 1;
+          }
+
+          img{
+            filter: brightness(0.5);
+          }
+        }
+      }
+
+      .career-name{
+        text-align: center;
+      }
+    }
+  }
+}

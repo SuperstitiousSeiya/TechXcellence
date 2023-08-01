@@ -454,25 +454,27 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
   padding-left: 1rem;
 }
 
-.hero .content .description {
+.hero .content .description_container {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 70%;
-          flex: 1 1 70%;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
   padding: 3rem 2rem;
   position: relative;
-  -ms-flex-preferred-size: 300px;
-      flex-basis: 300px;
   border: 3px solid var(--primary-clr);
 }
 
-.hero .content .description span {
+.hero .content .description_container span {
   color: var(--accent-clr);
 }
 
-.hero .content .description::before {
+.hero .content .description_container::before {
   position: absolute !important;
   content: "";
   width: 100%;

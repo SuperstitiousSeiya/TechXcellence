@@ -39,7 +39,7 @@ body.green {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
 }
@@ -91,7 +91,7 @@ body.green {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
 }
@@ -113,8 +113,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 300px;
   padding-inline: 3rem;
   gap: 2rem;
@@ -122,21 +122,21 @@ body {
 
 #footer .left {
   -webkit-box-align: baseline !important;
-      -ms-flex-align: baseline !important;
-          align-items: baseline !important;
+  -ms-flex-align: baseline !important;
+  align-items: baseline !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 100%;
   border-right: 2px solid var(--text-clr);
 }
@@ -148,8 +148,8 @@ body {
   height: 100%;
   gap: 1rem;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 #footer .right .links a {
@@ -161,21 +161,21 @@ body {
 
 #footer .right .col-1 {
   -webkit-box-pack: start !important;
-      -ms-flex-pack: start !important;
-          justify-content: flex-start !important;
+  -ms-flex-pack: start !important;
+  justify-content: flex-start !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -226,7 +226,7 @@ body.green {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
 }
@@ -246,11 +246,11 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   top: 0;
   position: fixed;
   background-color: var(--bg-clr);
@@ -264,11 +264,15 @@ nav {
 
 nav .logo {
   -ms-flex-preferred-size: 10%;
-      flex-basis: 10%;
+  flex-basis: 10%;
 }
 
 nav .logo-text {
-  background: -webkit-linear-gradient(right, var(--accent-clr), var(--primary-clr));
+  background: -webkit-linear-gradient(
+    right,
+    var(--accent-clr),
+    var(--primary-clr)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -279,11 +283,11 @@ nav .links {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 nav .links li {
@@ -298,11 +302,17 @@ nav .links li > a {
 
 nav #login__btn {
   -ms-flex-preferred-size: 10%;
-      flex-basis: 10%;
+  flex-basis: 10%;
   padding: 0.6rem 1rem;
   border-radius: 2rem;
   border: none;
-  background: -webkit-gradient(linear, left top, right top, from(var(--primary-clr)), to(var(--accent-clr)));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(var(--primary-clr)),
+    to(var(--accent-clr))
+  );
   background: linear-gradient(to right, var(--primary-clr), var(--accent-clr));
 }
 
@@ -348,7 +358,7 @@ body.green {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
 }
@@ -369,17 +379,17 @@ body {
   display: flex;
   gap: 5rem;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .__container > .container {
   padding: 3rem 2rem;
   position: relative;
   -ms-flex-preferred-size: 300px;
-      flex-basis: 300px;
+  flex-basis: 300px;
 }
 
 .__container > .container::before {
@@ -427,20 +437,28 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 80%;
 }
 
 .hero h1 {
   font-size: 50px;
-  background: -webkit-linear-gradient(right, var(--accent-clr), var(--primary-clr));
+  background: -webkit-linear-gradient(
+    right,
+    var(--accent-clr),
+    var(--primary-clr)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .what .header {
-  background: -webkit-linear-gradient(right, var(--accent-clr), var(--primary-clr));
+  background: -webkit-linear-gradient(
+    right,
+    var(--accent-clr),
+    var(--primary-clr)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 2rem;
@@ -451,19 +469,19 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .what .contents > * {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
+  -ms-flex: 1 1 50%;
+  flex: 1 1 50%;
 }
 
 .what .contents .img__container {
@@ -503,19 +521,23 @@ section {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 3rem;
 }
 
 .career_paths__header {
-  background: -webkit-linear-gradient(right, var(--accent-clr), var(--primary-clr));
+  background: -webkit-linear-gradient(
+    right,
+    var(--accent-clr),
+    var(--primary-clr)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -525,25 +547,30 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 200px;
   -webkit-box-flex: 20%;
-      -ms-flex: 20%;
-          flex: 20%;
+  -ms-flex: 20%;
+  flex: 20%;
 }
 
-.career_paths .__container .container button {
-  background: -webkit-linear-gradient(right, var(--accent-clr), var(--primary-clr));
+.career_paths .__container .container a {
+  background: -webkit-linear-gradient(
+    right,
+    var(--accent-clr),
+    var(--primary-clr)
+  );
   padding: 1rem 2rem;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
   color: var(--bg-clr);
+  text-align: center;
 }
 
 .career_paths .__container .container::before {
@@ -560,10 +587,14 @@ section {
   cursor: pointer;
 }
 
-.career_paths button a {
+.career_paths button {
   font-weight: bold;
   color: var(--text-clr);
-  background: -webkit-linear-gradient(right, var(--accent-clr), var(--primary-clr));
+  background: -webkit-linear-gradient(
+    right,
+    var(--accent-clr),
+    var(--primary-clr)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -573,15 +604,19 @@ section {
   display: grid;
   place-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 4rem 3rem;
   -ms-grid-columns: 1fr 20%;
-      grid-template-columns: 1fr 20%;
+  grid-template-columns: 1fr 20%;
 }
 
 .school-offering div h1 {
-  background: -webkit-linear-gradient(right, var(--accent-clr), var(--primary-clr));
+  background: -webkit-linear-gradient(
+    right,
+    var(--accent-clr),
+    var(--primary-clr)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -596,7 +631,11 @@ section {
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  background: -webkit-linear-gradient(right, var(--accent-clr), var(--primary-clr));
+  background: -webkit-linear-gradient(
+    right,
+    var(--accent-clr),
+    var(--primary-clr)
+  );
   padding: 0.8rem 2rem !important;
 }
 

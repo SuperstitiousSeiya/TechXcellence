@@ -70,9 +70,7 @@
       <div class="municipal_select-container">
         <h2 class="header">MUNICIPALITY</h2>
         <select name="municipality" id="municipal_select">
-          <option value="Cebu">Cebu</option>
-          <option value="Negros">Negros</option>
-          <option value="Bohol">Bohol</option>
+          <option value="default" selected hidden>Municipality</option>
         </select>
       </div>
 
@@ -81,13 +79,7 @@
         <label class="tracks_container">
           <label class="abm-strand track">
             <p>ABM</p>
-            <input
-              type="radio"
-              name="choose_track"
-              id="academic"
-              value="abm"
-              checked
-            />
+            <input type="radio" name="choose_track" id="academic" value="abm" />
             <span class="checkmark"><div class="inner_circle"></div></span>
           </label>
           <label class="stem-strand track">
@@ -97,7 +89,6 @@
               name="choose_track"
               id="academic"
               value="stem"
-              checked
             />
             <span class="checkmark"><div class="inner_circle"></div></span>
           </label>
@@ -112,13 +103,21 @@
               type="radio"
               name="choose_track"
               id="techvoc"
-              value="techvoc"
+              value="tvl"
+              checked
             />
             <span class="checkmark"><div class="inner_circle"></div></span>
           </label>
         </label>
       </div>
       <button id="find_school-btn">FIND SCHOOL</button>
+    </section>
+
+    <!-- School Results Section -->
+    <section>
+      <div id="search_results"></div>
+      <button id="prevButton" style="display: none">Previous</button>
+      <button id="nextButton" style="display: none">Next</button>
     </section>
 
     <!-- suggested school section -->
@@ -339,5 +338,6 @@
         </div>
       </div>
     </footer>
+    <script src="exploreSchools.js"></script>
   </body>
 </html>

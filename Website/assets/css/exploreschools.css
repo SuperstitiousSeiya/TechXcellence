@@ -415,4 +415,355 @@ body {
 .__container > .container:nth-of-type(even)::before {
   border: 1px dashed var(--accent-clr);
 }
+
+section {
+  margin-bottom: 4rem;
+  padding-inline: 3rem;
+}
+
+body > * {
+  margin-bottom: 6rem;
+}
+
+.hero {
+  height: 50%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.hero_title {
+  background: -webkit-linear-gradient(right, var(--accent-clr), var(--primary-clr));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(3rem, 5vw, 5rem);
+}
+
+.hero .subtitle {
+  background: -webkit-linear-gradient(left, var(--text-clr), var(--accent-clr));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.search_function {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.search_function > * {
+  margin-bottom: 2rem;
+}
+
+.search_function h2.header {
+  color: var(--primary-clr);
+  margin-bottom: 2rem;
+}
+
+.search_function .municipal_select-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
+}
+
+.search_function .municipal_select-container select {
+  margin-left: 1rem;
+  padding: 0.6rem 5rem;
+  background-color: var(--semi-bg);
+  color: var(--text-clr);
+  border: none;
+  border-radius: 3rem;
+}
+
+.search_function .municipal_select-container select option {
+  background-color: var(--semi-bg) !important;
+  color: var(--bg-clr);
+  padding: 0.6rem 1rem;
+}
+
+.search_function #find_school-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: -webkit-linear-gradient(right, var(--accent-clr), var(--primary-clr));
+  font-weight: bold;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+}
+
+.search_function .choose_track {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+.search_function .choose_track .tracks_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  gap: 2rem;
+  margin-left: 1rem;
+}
+
+.search_function .choose_track .tracks_container .track {
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  gap: 2rem;
+}
+
+.search_function .choose_track .tracks_container .track:hover .checkmark {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.search_function .choose_track .tracks_container .track input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.search_function .choose_track .tracks_container .track input:checked ~ .checkmark .inner_circle {
+  display: block;
+}
+
+.search_function .choose_track .tracks_container .track .checkmark {
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  border: 2px solid var(--accent-clr);
+  padding: 2px;
+  height: 15px;
+  width: 15px;
+  aspect-ratio: 1/1;
+  background-color: var(--bg-clr);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search_function .choose_track .tracks_container .track .checkmark .inner_circle {
+  display: none;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background: var(--accent-clr);
+}
+
+.search_function .choose_track .tracks_container .track .checkmark:after {
+  content: "";
+}
+
+.header_container {
+  background-color: var(--semi-bg);
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  padding: 2rem;
+  border-radius: 0 2rem 2rem 0;
+}
+
+.header_container h1 {
+  background: -webkit-linear-gradient(right, var(--accent-clr), var(--primary-clr));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.suggested_school .school_offer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6rem;
+}
+
+.suggested_school .school_offer-wrapper .school_offer {
+  width: 100% !important;
+}
+
+.suggested_school .school_offer-wrapper .school_offer-header {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: var(--primary-clr);
+  margin-bottom: 2rem;
+}
+
+.suggested_school .school_offer-wrapper .school_offer-header span {
+  font-weight: bold;
+}
+
+.suggested_school .school_offer-wrapper .school_offer-carousel {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr 50px;
+      grid-template-columns: 50px 1fr 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.suggested_school .school_offer-wrapper .school_offer-carousel .next-chevron {
+  margin-left: auto;
+}
+
+.suggested_school .school_offer-wrapper .school_offer-carousel .school-cards {
+  overflow-x: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.suggested_school .school_offer-wrapper .school_offer-carousel .school-cards::-webkit-scrollbar {
+  width: 0;
+}
+
+.suggested_school .school_offer-wrapper .school_offer-carousel .school-cards::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.suggested_school .school_offer-wrapper .school_offer-carousel .school-cards::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.suggested_school .school_offer-wrapper .school_offer-carousel .school-cards .school-card {
+  background-color: var(--semi-bg);
+  -webkit-transition: -webkit-backdrop-filter 0.25s;
+  transition: -webkit-backdrop-filter 0.25s;
+  transition: backdrop-filter 0.25s;
+  transition: backdrop-filter 0.25s, -webkit-backdrop-filter 0.25s;
+  padding: 1rem 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 300px;
+          flex: 1 0 300px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.suggested_school .school_offer-wrapper .school_offer-carousel .school-cards .school-card:hover {
+  -webkit-backdrop-filter: brightness(1.5);
+          backdrop-filter: brightness(1.5);
+}
+
+.suggested_school .school_offer-wrapper .school_offer-carousel .school-cards .school-card img {
+  width: 100px;
+}
+
+.suggested_school .school_offer-wrapper .school_offer-carousel .school-cards .school-card .school_name {
+  color: var(--primary-clr);
+  font-size: 1.2rem;
+}
+
+.suggested_school .school_offer-wrapper .school_offer-carousel .school-cards .school-card .school_location {
+  font-size: 0.9rem;
+}
+
+.suggested_school .school_offer-wrapper .school_offer-carousel .school-cards .school-card .view_school-container {
+  -ms-flex-item-align: self-end;
+      align-self: self-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--accent-clr);
+  justify-self: flex-end;
+}
+
+.suggested_school .school_offer-wrapper .school_offer-carousel .school-cards .school-card .view_school-container > * {
+  font-size: 0.7rem;
+}
+
+.suggested_school .school_offer-wrapper .school_offer-carousel .school-cards .school-card .view_school-container i {
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+.suggested_school .school_offer-wrapper .school_offer-carousel .school-cards .school-card .view_school-container:hover i {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
 /*# sourceMappingURL=exploreschools.css.map */

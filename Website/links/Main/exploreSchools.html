@@ -4,6 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../assets/css/exploreschools.css" />
+    <!-- font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css"
+    />
+    <script src="../../assets/scripts/components/scroll.js" defer></script>
     <title>Explore Schools | TechXcellence</title>
   </head>
   <body>
@@ -23,7 +44,8 @@
       <button id="login__btn"><a href="">LOGIN</a></button>
     </nav>
 
-    <section class="hero-explore">
+    <!-- hero section  -->
+    <section class="hero">
       <h1 class="hero_title">Explore Schools and Tracks</h1>
       <p class="subtitle">
         Find Schools by Province and Track Discover different Educational
@@ -43,58 +65,279 @@
       </svg>
     </section>
 
+    <!-- search function section  -->
     <section class="search_function">
-      <select name="municipal" id="">
-        <h2>MUNICIPALITY</h2>
-        <option value="Cebu">Cebu</option>
-        <option value="ambot">Cebu</option>
-        <option value="ambot">Cebu</option>
-      </select>
-      <label for="choose_track">
-        <h2>CHOOSE TRACK</h2>
-        <div class="academic track">
-          <input
-            type="radio"
-            name="choose_track"
-            id="academic"
-            value="academic"
-          />
-          <label for="academic">Academic</label>
-        </div>
-        <div class="sports track">
-          <input type="radio" name="choose_track" id="sports" value="sports" />
-          <label for="sports">Sports</label>
-        </div>
-        <div class="techvoc track">
-          <input
-            type="radio"
-            name="choose_track"
-            id="techvoc"
-            value="techvoc"
-          />
-          <label for="techvoc">Techvoc</label>
-        </div>
-      </label>
+      <div class="municipal_select-container">
+        <h2 class="header">MUNICIPALITY</h2>
+        <select name="municipality" id="municipal_select">
+          <option value="Cebu">Cebu</option>
+          <option value="Negros">Negros</option>
+          <option value="Bohol">Bohol</option>
+        </select>
+      </div>
 
+      <div class="choose_track">
+        <h2 class="header">CHOOSE TRACK</h2>
+        <label class="tracks_container">
+          <label class="abm-strand track">
+            <p>ABM</p>
+            <input
+              type="radio"
+              name="choose_track"
+              id="academic"
+              value="abm"
+              checked
+            />
+            <span class="checkmark"><div class="inner_circle"></div></span>
+          </label>
+          <label class="stem-strand track">
+            <p>STEM</p>
+            <input
+              type="radio"
+              name="choose_track"
+              id="academic"
+              value="stem"
+              checked
+            />
+            <span class="checkmark"><div class="inner_circle"></div></span>
+          </label>
+          <label class="gas-strand track">
+            <p>GAS</p>
+            <input type="radio" name="choose_track" id="sports" value="gas" />
+            <span class="checkmark"><div class="inner_circle"></div></span>
+          </label>
+          <label class="techvoc-strand track">
+            <p>Techvoc</p>
+            <input
+              type="radio"
+              name="choose_track"
+              id="techvoc"
+              value="techvoc"
+            />
+            <span class="checkmark"><div class="inner_circle"></div></span>
+          </label>
+        </label>
+      </div>
       <button id="find_school-btn">FIND SCHOOL</button>
     </section>
 
-    <!-- suggested school  -->
+    <!-- suggested school section -->
+    <div class="header_container">
+      <h1 class="header">SUGGESTED SCHOOLS FOR YOU</h1>
+    </div>
     <section class="suggested_school">
-      <div class="header_container">
-        <h1 class="header">SUGGESTED SCHOOLS FOR YOU</h1>
-      </div>
-
-      <div class="school_offer-wrapper">
-        <div class="school_offer academic">
-          <div class="school_offer-header">
-            SCHOOLS THAT OFFERS ACADEMIC TRACK
+      <div class="school_offer-wrapper wrapper">
+        <div class="school_offer abm">
+          <h2 class="school_offer-header">
+            SCHOOLS THAT OFFERS <span>ABM</span> TRACK
+          </h2>
+          <div class="school_offer-carousel carousel">
+            <div class="prev-chevron chevron">
+              <i class="fa-light fa-chevron-left"></i>
+            </div>
+            <div class="school-cards">
+              <div class="school-card">
+                <img
+                  src="../../assets/images/Websites/Suggested schools logo/usc.png"
+                  alt=""
+                />
+                <p class="school_name">University of San Carlos</p>
+                <p class="school_location">Short def</p>
+                <a href="#" class="view_school-container">
+                  <p class="view_school">VISIT SCHOOL</p>
+                  <i class="fa-regular fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="school-card">
+                <img
+                  src="../../assets/images/Websites/Suggested schools logo/usc.png"
+                  alt=""
+                />
+                <p class="school_name">University of San Carlos</p>
+                <p class="school_location">Short def</p>
+                <a href="#" class="view_school-container">
+                  <p class="view_school">VISIT SCHOOL</p>
+                  <i class="fa-regular fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="school-card">
+                <img
+                  src="../../assets/images/Websites/Suggested schools logo/usc.png"
+                  alt=""
+                />
+                <p class="school_name">University of San Carlos</p>
+                <p class="school_location">Short def</p>
+                <a href="#" class="view_school-container">
+                  <p class="view_school">VISIT SCHOOL</p>
+                  <i class="fa-regular fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="school-card">
+                <img
+                  src="../../assets/images/Websites/Suggested schools logo/usc.png"
+                  alt=""
+                />
+                <p class="school_name">University of San Carlos</p>
+                <p class="school_location">Short def</p>
+                <a href="#" class="view_school-container">
+                  <p class="view_school">VISIT SCHOOL</p>
+                  <i class="fa-regular fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="school-card">
+                <img
+                  src="../../assets/images/Websites/Suggested schools logo/usc.png"
+                  alt=""
+                />
+                <p class="school_name">University of San Carlos</p>
+                <p class="school_location">Short def</p>
+                <a href="#" class="view_school-container">
+                  <p class="view_school">VISIT SCHOOL</p>
+                  <i class="fa-regular fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="next-chevron chevron">
+              <i class="fa-light fa-chevron-right"></i>
+            </div>
           </div>
-          .school_offer-carouse
         </div>
-        <div class="school_offer sports"></div>
-        <div class="school_offer techvoc"></div>
+
+        <div class="school_offer gas">
+          <h2 class="school_offer-header">
+            SCHOOLS THAT OFFERS <span>GAS</span> TRACK
+          </h2>
+          <div class="school_offer-carousel carousel">
+            <div class="prev-chevron chevron">
+              <i class="fa-light fa-chevron-left"></i>
+            </div>
+            <div class="school-cards">
+              <div class="school-card">
+                <img
+                  src="../../assets/images/Websites/Suggested schools logo/usc.png"
+                  alt=""
+                />
+                <p class="school_name">University of San Carlos</p>
+                <p class="school_location">Short def</p>
+                <a href="#" class="view_school-container">
+                  <p class="view_school">VISIT SCHOOL</p>
+                  <i class="fa-regular fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="school-card">
+                <img
+                  src="../../assets/images/Websites/Suggested schools logo/usc.png"
+                  alt=""
+                />
+                <p class="school_name">University of San Carlos</p>
+                <p class="school_location">
+                  Gov. M. Cuenco Avenue, Barangay Talamban, Cebu City 6000 Cebu
+                </p>
+                <a href="#" class="view_school-container">
+                  <p class="view_school">VISIT SCHOOL</p>
+                  <i class="fa-regular fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="school-card">
+                <img
+                  src="../../assets/images/Websites/Suggested schools logo/usc.png"
+                  alt=""
+                />
+                <p class="school_name">University of San Carlos</p>
+                <p class="school_location">Short def</p>
+                <a href="#" class="view_school-container">
+                  <p class="view_school">VISIT SCHOOL</p>
+                  <i class="fa-regular fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="next-chevron chevron">
+              <i class="fa-light fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="school_offer techvoc">
+          <h2 class="school_offer-header">
+            SCHOOLS THAT OFFERS <span>TECHVOC</span> TRACK
+          </h2>
+          <div class="school_offer-carousel carousel">
+            <div class="prev-chevron chevron">
+              <i class="fa-light fa-chevron-left"></i>
+            </div>
+            <div class="school-cards">
+              <div class="school-card">
+                <img
+                  src="../../assets/images/Websites/Suggested schools logo/usc.png"
+                  alt=""
+                />
+                <p class="school_name">University of San Carlos</p>
+                <p class="school_location">Short def</p>
+                <a href="#" class="view_school-container">
+                  <p class="view_school">VISIT SCHOOL</p>
+                  <i class="fa-regular fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="school-card">
+                <img
+                  src="../../assets/images/Websites/Suggested schools logo/usc.png"
+                  alt=""
+                />
+                <p class="school_name">University of San Carlos</p>
+                <p class="school_location">Short def</p>
+                <a href="#" class="view_school-container">
+                  <p class="view_school">VISIT SCHOOL</p>
+                  <i class="fa-regular fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="school-card">
+                <img
+                  src="../../assets/images/Websites/Suggested schools logo/usc.png"
+                  alt=""
+                />
+                <p class="school_name">University of San Carlos</p>
+                <p class="school_location">Short def</p>
+                <a href="#" class="view_school-container">
+                  <p class="view_school">VISIT SCHOOL</p>
+                  <i class="fa-regular fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="next-chevron chevron">
+              <i class="fa-light fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <footer id="footer">
+      <div class="left">
+        <!-- logo  -->
+        <img src="" alt="" />
+        <h1 class="footer__header">TechXcellence</h1>
+        <p class="quote">Empower Yourself with Cutting-Edge Techvoc Courses.</p>
+      </div>
+      <div class="right">
+        <div class="col-1">
+          <div class="stars">
+            <i class="fa-solid fa-star-sharp"></i>
+            <i class="fa-solid fa-star-sharp"></i>
+            <i class="fa-solid fa-star-sharp"></i>
+            <i class="fa-solid fa-star-sharp"></i>
+            <i class="fa-solid fa-star-sharp"></i>
+          </div>
+          <div class="quote">
+            "Embrace the art of making, and let your creativity unleash your
+            potential to leave an indelible mark on the world."
+          </div>
+        </div>
+
+        <div class="links">
+          <a href="#">Privacy Policy</a> <br /><br />
+          <a href="#">Terms and Condition</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

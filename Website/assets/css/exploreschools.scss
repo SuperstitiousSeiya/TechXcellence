@@ -4,8 +4,271 @@
 @import "components/dualcontainer.scss";
 
 
+section{
+    margin-bottom: 4rem;
+    padding-inline: $margin-padding;
+}
+
+body > *{
+    margin-bottom: 6rem;
+}
+
 // hero section 
 
-.hero-explore{
-    
+.hero{
+    height: 50%;
+    text-align: center;
+    @include flex_center();
+    gap: 2rem;
+    &_title{
+        @include vibrant__gradient();
+        font-size: clamp(3rem, 5vw, 5rem);
+    }
+
+    .subtitle{
+        @include vibrant__gradient2(left);
+    }
+}
+
+
+// search section 
+
+.search_function{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    &  >  *{
+        margin-bottom: 2rem;
+    }
+
+    h2.header{
+        color: $primary-clr;
+        margin-bottom: 2rem;
+    }
+    .municipal_select-container{
+        flex: 1 1 30%;
+        select{
+            margin-left: 1rem;
+            padding: 0.6rem 5rem;
+            background-color: $semi-bg;
+            color: $text-clr;
+            border: none;
+            border-radius: 3rem;
+            
+            option{
+                background-color: $semi-bg !important;
+                color: $bg-clr;
+                padding: 0.6rem 1rem;
+            }
+        }
+    }
+
+
+    #find_school-btn{
+        @include button_main();
+        @include gradient_background();
+        font-weight: bold;
+        width: fit-content !important;
+        flex: 0 0 30%;
+    }
+
+    .choose_track{
+        flex: 1 1 50%;
+
+
+
+        .tracks_container{
+            display: flex;
+            gap: 1rem;
+            flex-direction: row !important;
+            gap: 2rem;
+            margin-left: 1rem;
+            .track{
+                position: relative;
+                // padding-left: 25px;
+                // margin-bottom: 12px;
+                cursor: pointer;
+                font-size: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row-reverse;
+                gap: 2rem;
+
+                &:hover .checkmark {
+                    transform: scale(1.10);
+                }
+                // gap: ;
+                input{
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    
+
+      
+
+
+                    &:checked ~ .checkmark{
+                        // background-color: $accent-clr;
+                        .inner_circle{
+                            display: block;
+                        }
+                    }
+            
+                }
+
+                
+                .checkmark{
+                    // position: absolute;
+                    // top: 0;
+                    // left: 0;
+                    transition: transform 0.25s;
+                    border: 2px solid $accent-clr;
+                    padding: 2px;
+                    height: 15px;
+                    width: 15px;
+                    aspect-ratio: 1/1;
+                    background-color: $bg-clr;
+                    border-radius: 50%;
+                    // display: flex;
+                    @include flex_center();
+                    
+                    .inner_circle{
+                        display: none;
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 50%;
+                        background: $accent-clr;
+                    }
+                    &:after {
+                        content: "";
+                        // position: absolute;
+
+                   }
+                }
+            }
+        }
+    }
+
+}
+
+// for suggested school header 
+.header_container{
+    background-color: $semi-bg;
+    width: fit-content !important;
+    padding: 2rem;
+    border-radius: 0 2rem 2rem 0;
+    h1{
+        @include vibrant__gradient();
+        // margin-bottom: 3rem
+    }
+}
+
+.suggested_school{
+
+
+    .school_offer-wrapper{
+        @include flex_center();
+        gap: 6rem;
+        .school_offer{
+            width: 100% !important;
+            &-header{
+                font-size: 1.2rem;
+                font-weight: normal;
+                color: $primary-clr;
+                margin-bottom: 2rem;
+                span{
+                    font-weight: bold;
+                    
+                }
+            }
+
+            &-carousel{
+                display: grid;
+                grid-template-columns: 50px 1fr 50px;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                // background-color: black;
+                .next-chevron{
+                    margin-left: auto;
+                }
+                .school-cards{
+                    overflow-x: auto;
+                    // justify-content: space-between;
+                    display: flex;
+                    gap: 1rem;
+
+                    &::-webkit-scrollbar{
+                        width: 0;
+                    }
+                    &::-webkit-scrollbar-track{
+                        background-color: transparent;
+                    }
+
+                    &::-webkit-scrollbar-thumb{
+                        background-color: transparent;
+                    }
+                    .school-card{
+                        background-color: $semi-bg;
+                        transition: backdrop-filter 0.25s;
+                        padding: 1rem 1rem;
+                        flex: 1 0 300px;
+                        border-radius: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        justify-content: space-between;
+                        // school cards on hover 
+
+                        &:hover{
+                            backdrop-filter: brightness(1.5);
+                        }
+
+                        img{
+                            width: 100px;
+                        }
+
+                        .school_name{
+                            color: $primary-clr;
+                            font-size: 1.2rem;
+                        }
+
+                        .school_location{
+                            font-size: 0.9rem;
+                        }
+
+                        .view_school-container{
+                            align-self: self-end;
+                            display: flex;
+                            gap: 0.5rem;
+                            align-items: center;
+                            color: $accent-clr;
+                            justify-self: flex-end;
+
+                            & > *{
+                                font-size: 0.7rem;
+                            }
+                        
+                            i{
+                                transition: transform 0.25s;
+                            }
+
+                            &:hover{
+                                i{
+                                    transform: translateX(5px);
+                                }
+                            }
+                        }
+                        // @include flex_center();
+                    }
+                }
+            }
+
+          
+        }
+   
+    }
 }

@@ -27,19 +27,56 @@
       href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css"
     />
 
+    <script
+      src="../../assets/scripts/components/themeChanger.js"
+      defer
+    ></script>
     <title>Industrial Arts</title>
   </head>
   <body>
+    <!-- theme changer  -->
+    <div name="theme" id="theme_changer">
+      <ul>
+        <li class="" data-value="bold_vibrant">Bold Vibrant</li>
+        <li class="mystic" data-value="mystic">Mystic</li>
+        <li class="green" data-value="green">Green</li>
+      </ul>
+    </div>
+    <!-- nav starts here -->
     <nav>
       <div class="logo">
         <h1 class="logo-text">TechXcellence</h1>
       </div>
 
       <ul class="links">
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">COURSE & TRACKS</a></li>
-        <li><a href="#">SCHOOLS</a></li>
-        <li><a href="#">CONTACTS</a></li>
+        <li><a href="../../index.html">HOME</a></li>
+        <li class="chevron">
+          <a href="#">COURSE & TRACKS</a
+          ><i class="fa-light fa-chevron-right"></i>
+          <!-- dropdown    -->
+          <div class="menu-dropdown" id="menu-dropdown">
+            <div class="menu-wrapper">
+              <h2 class="menu-header">COURSES & TRACKS</h2>
+              <div class="course-tracks-list">
+                <ul class="industrial-links">
+                  <li class="header">
+                    <a href="industrialArts.html">Industrial Arts</a>
+                  </li>
+                  <li><a href="curriculum.html">Curriculum</a></li>
+                  <li><a href="careerpaths.html">Career Paths</a></li>
+                  <li><a href="../Faqs/faqs.html">FAQs</a></li>
+                </ul>
+                <ul class="home_economics-links"></ul>
+                <ul class="agri_fishery-links"></ul>
+                <ul class="ict-links"></ul>
+              </div>
+            </div>
+            <!-- menu dropdown ends here  -->
+          </div>
+        </li>
+
+        <li><a href="exploreSchools.html">SCHOOLS</a></li>
+        <li><a href="#contact-us">CONTACT US</a></li>
         <li><a href="#">LEARNING EXPERIENCE</a></li>
       </ul>
 
@@ -76,31 +113,73 @@
       </div>
     </section>
 
-    <section class="career_paths">
-      <h1 class="career_paths__header">Different Career Paths</h1>
-      <div class="__container career_paths_boxes">
-        <div class="container">
-          <button>carpentry</button>
+    <!-- different specializations  -->
+    <section class="different_specializations">
+      <div class="left">
+        <div class="specializations_description">
+          <h1 class="header">Different Specializations</h1>
+          <p class="description">
+           <span class="accent"> Explore</span> the diverse and rewarding opportunities in every  <span class="primary"> Industrial
+            Arts Specializations.</span>
+          </p>
+          <p class="description">
+            <span class="accent"> Industrial Arts</span> covers number of specializations that would help
+            enhancing ones skills and abilities ready for the industry.
+          </p>
         </div>
-        <div class="container">
-          <button>WELDING</button>
-        </div>
-        <div class="container">
-          <button>SOLAR ENERGY TECHNICIAN</button>
+        <a href="#" class="view_more-btn"
+          ><p>View more</p> <i class="fa-light fa-arrow-right-long"></i>
+        </a>
+      </div>
+
+      <div class="right">
+        <div class="specializations-wrapper">
+          <div class="specialization welding">
+            <img src="../../assets/images/Main/industrialArts/welding.jpg" alt="">
+            <button><a href="">WELDING</a></button>
+          </div>
+
+          <div class="specialization welding">
+            <img src="../../assets/images/Main/industrialArts/welding.jpg" alt="">
+            <button><a href="">WELDING</a></button>
+          </div>
+          <div class="specialization welding">
+            <img src="../../assets/images/Main/industrialArts/welding.jpg" alt="">
+            <button><a href="">WELDING</a></button>
+          </div>
+          <div class="specialization welding">
+            <img src="../../assets/images/Main/industrialArts/welding.jpg" alt="">
+            <button><a href="">WELDING</a></button>
+          </div>
+
+          
         </div>
       </div>
-      <button><a href="">VIEW MORE</a></button>
     </section>
 
-    <section class="school-offering">
-      <div>
-        <h1>SCHOOLS OFFERING TRACKS</h1>
-        <p class="description">
-          Unlock Your Potential with Schools Offering Exciting Tracks! Embark on
-          a Journey of Possibilities and Discover Your Ideal Educational Path.
-        </p>
+    <section class="curriculum">
+
+      <div class="img-container">
+        <img src="../../assets/images/Main/industrialArts/see-curriculum.png" alt="">
       </div>
-      <button id="find_school"><a href="">FIND SCHOOL</a></button>
+      <div class="description-container">
+     
+        <p class="description">
+          <h1>CURRICULUM</h1>
+          The Industrial Arts Strand is a gateway to the captivating realm of
+          skilled craftsmanship and creative expression. Within this specialized
+          track, students are immersed in a hands-on curriculum that nurtures
+          their talents and refines their technical expertise. From woodworking
+          to metalworking, the Industrial Arts Strand offers an enriching
+          experience where students can mold their passion into a thriving
+          career. Uncover the intricacies of the Industrial Arts curriculum and
+          embark on a journey of artistic discovery and professional growth.
+        </p>
+        <a class="button" href="curriculum.html"><p>See curriculum</p><i class="fa-light fa-arrow-right-long"></i></a>
+      </div>
+    
+    
+    
     </section>
 
     <footer id="footer">
